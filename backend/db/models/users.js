@@ -10,10 +10,10 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Users.belongsTo(models.Galleries,{
+      Users.hasOne(models.Galleries,{
         foreignKey:'user_id'
       })
-      Users.belongsToMany(models.Albums,{through:models.Albums_Colabarators})
+      Users.belongsToMany(models.Albums,{through:models.Albums_Colabarators,foreignKey:'user_id'})
     }
   }
   Users.init({

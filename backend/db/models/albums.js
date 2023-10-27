@@ -14,12 +14,13 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey:'gallery_id'
       })
       Albums.belongsToMany(models.Files,{through:models.Albums_Files})
-      Albums.belongsToMany(models.Users,{through:models.Albums_Colabarators})
+      Albums.belongsToMany(models.Users,{through:models.Albums_Colabarators,foreignKey:"album_id"})
     }
   }
   Albums.init({
     name: DataTypes.STRING,
-    gallery_id: DataTypes.INTEGER
+    gallery_id: DataTypes.INTEGER,
+    is_private: DataTypes.BOOLEAN,
   }, {
     sequelize,
     modelName: 'Albums',

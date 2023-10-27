@@ -24,9 +24,13 @@ module.exports = {
         }
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       },
+      is_private:{
+        type:Sequelize.BOOLEAN,
+        defaultValue:false,
+      }
     });
   },
   async down(queryInterface, Sequelize) {
