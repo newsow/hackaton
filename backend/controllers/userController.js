@@ -76,9 +76,6 @@ class userController{
 
     async findOneUser(req,res){
         try {
-            const token = req.headers.authorization.split(' ')[1]
-            const user_token = jwt.verify(token,secret_key)
-
             const {username} = req.body
             const user = await Users.findOne({where:{username:username}})
             const gallery = await Galleries.findOne({where:{user_id:user.id},
