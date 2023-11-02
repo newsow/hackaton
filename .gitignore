@@ -1,3 +1,7 @@
 backend/node_modules
 
 frontend/node_modules
+
+backend2/venv
+
+backend2/.idea

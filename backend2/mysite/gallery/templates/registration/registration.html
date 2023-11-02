@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+{%load static%}
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'gallery/css/style.css'%}">
+
+    <title>Registration</title>
+   
+</head>
+<body>
+    
+    <section>
+        <div class="form-box2">
+            <div class="form-value">
+                <form action="{%url 'registration'%}" method="POST">
+                    {%csrf_token%}
+                    <h2>Create an account</h2>
+
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="login" required id="username">
+                        <label for="">login</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required id="password">
+                        <label for="">Password</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required id="password2">
+                        <label for="">Repeat password</label>
+                    </div>
+                    
+                    <button onclick="window.location.href = '1';">Create <ion-icon name="add-circle-outline"></ion-icon></button>
+                    <div class="register">
+                        <p>Already have an account?</p>                     
+                    </div>
+                </form>
+
+                <button class="registration" type="submit" ><a href="{%url 'login'%}">Login</a></button>
+            </div>
+        </div>
+    </section>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

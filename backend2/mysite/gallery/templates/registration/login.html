@@ -1,42 +1,38 @@
+
 <!DOCTYPE html>
+{%load static%}
 <html lang="ru">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{%static 'gallery/css/style.css'%}">
 
-    <title>Registration</title>
+    <title>Login</title>
    
 </head>
 <body>
     
     <section>
-        <div class="form-box2">
+        <div class="form-box">
             <div class="form-value">
-                <form action="">
-                    <h2>Create an account</h2>
-                    <div class="inputbox">
-                        <ion-icon name="person-circle-outline"></ion-icon>
-                        <input type="nickname" required>
-                        <label for="">nickname</label>
-                    </div>
+                <form  method="POST">
+                    {%csrf_token%}
+                    <h2>Login</h2>
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="login" required>
+                        <input type="login" id="username" required>
                         <label for="">login</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required>
+                        <input type="password" required id="password">
                         <label for="">Password</label>
                     </div>
-                    
-                    <button onclick="window.location.href = '1';">Create <ion-icon name="add-circle-outline"></ion-icon></button>
+                    <button onclick="window.location.href = '1';">Log in</button>
                     <div class="register">
-                        <p>Already have an account?</p>                     
+                        <p>Don't have a account?</p>                     
                     </div>
                 </form>
-
-                <button class="registration" onclick="window.location.href = 'login.html';">Login</button>
+                <button class="registration" type="submit"><a href="{%url 'registration'%}">Register</a></button>
             </div>
         </div>
     </section>
