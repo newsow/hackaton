@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-main.css">
+    <title>PhotoWave</title>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+    function FuncImagesShow() {
+        document.getElementById("main").style.display = "block";
+        document.getElementById("click").style.display = "block";
+      }
+      </script>
+</head>
+<body>
+
+    <div class="menu" onclick="window.location.href = 'user-info.html';">
+        <p>тут ник пользователя</p>
+        <a>Show photos</a>
+        <img id="avatar" class="avatar" >
+    </div>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="">
+                    <h2>User's search</h2> 
+                    <div class="inputbox">
+                        <ion-icon name="people-circle-outline"></ion-icon>
+                        <input type="user" required>
+                        <label for="">Username</label>
+                        
+                    </div>
+                    <b id = "click" onclick = "FuncImagesShow()"><ion-icon name="search-outline" style="margin-top: 11px; margin-left: 11px;"></ion-icon></b> 
+                    
+                </form>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <div class="gallary" id="main">
+        <div class="stroke">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
+                <img class="image">
+            </div>
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
+                <img class="image">
+            </div>
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
+                <img class="image">
+            </div>
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
+                <img class="image">
+            </div>
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
+                <img class="image">
+            </div>
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
+                <img class="image">
+            </div>
+        </div>
+        <div class="stroke">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
+                <img class="image">
+            </div>
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
+                <img class="image">
+            </div>
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
+                <img class="image">
+            </div>
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
+                <img class="image">
+            </div>
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
+                <img class="image">
+            </div>
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
+                <img class="image">
+            </div>
+        </div>
+
+
+        <div class="photoload-main" id="photoload">
+            <div class="close-set-photo-main" onclick = "Funcdialog()" id="close-set-photo"><ion-icon name="close-outline"></ion-icon></div>
+            <div class="setphoto-main">
+                <h3>LOGIN</h3>
+                <hr>
+                <div class="img-set-main">
+                    <div class="image-banner">
+                        <div id="image" class="image"></div>
+                    </div>
+                </div>
+                <div class="interact-block-main">
+                    <button class="button-share" href="#"><ion-icon name="share-social-outline"></ion-icon></button>
+                </div>
+            </div>
+        </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
