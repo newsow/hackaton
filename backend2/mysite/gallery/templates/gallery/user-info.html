@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{%static '/gallerycss/style-user-info.css'%}">
 
+
     <title>profile</title>
     <script>
         function FuncImages() {
@@ -16,13 +17,15 @@
             document.getElementById("close-set-photo").style.display = "none";
           }
     </script>
+
 </head>
 <body>
     
     <section>
         <div class="form-box">
             <div class="form-box2"></div>
-            <img class="avatar" src="https://static.cdprojektred.com/cms.cdprojektred.com/16x9_big/f4ce7b1be9bc4b0ee2df8f9a311a850a594d3d1a-1920x1080.jpg"><!-- картинку фигачишь вместо ссылки(в виде переменной, если нужно, всёравно сожрёт)-->
+            <img id="avatar" class="avatar">
+            <div class="avatar-change" id = "click" onclick = "return FuncImages(0)" class="image-banner"></div>
             <div class="info1">
                 <p>Login: </p> <P>0</p> <!--ЛОГИН-->
                 <p>Albums: </p> <P>0</p> <!--КОЛИЧЕСТВО АЛЬБОМОВ-->
@@ -30,10 +33,12 @@
             <div class="info2">
                 <P>Photos: </P><p>0</p> <!--КОЛИЧЕСТВО ФОТОГРАФИЙ-->
                 <P>Video: </P><p>0</p> <!--КОЛИЧЕСТВО ВИДЕО-->
-            </div>
+            </div>  
+                    <div>
                     <button class="button1" onclick="window.location.href = 'base.html';">confirm changes</button>
-
+                    <button class="button4" onclick="window.location.href = '1';">load photo</button>
                     <button class="button2" onclick="window.location.href = '1';">delete account</button>
+                    </div>
         </div>
 
     <div class="gallary">
@@ -107,56 +112,10 @@
         <div id = "click" onclick = "FuncImages()" class="image-banner">
             <img class="image">
         </div>
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
+
     </div>
-    <div class="stroke">
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image" src="">
-        </div>
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
     </div>
-    <div class="stroke">
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
-        <div id = "click" onclick = "FuncImages()" class="image-banner">
-            <img class="image">
-        </div>
-    </div>
+    
 
     </div>
     </section>
@@ -168,13 +127,18 @@
             <hr>
             <div class="img-set">
                 <div class="image-banner">
-                    <img class="image" src="">
+                    <div id="image" class="image"></div>
                 </div>
             </div>
             <div class="interact-block">
-                <button class="button3" >load photo</button>
-                <button class="button3" >delete photo</button>
-                <button class="button-share" >share this photo</button>
+                <button class="button3" ><ion-icon name="trash-outline" style="top:10px; left: 8px;margin-right: 10px;"></ion-icon>delete photo</button>
+                <button class="button-share" ><ion-icon name="share-social-outline" style="top:10px; left: 8px;"></ion-icon>
+                    <y style="font-size: 15px; font-weight: 600; top: 20px; color: #fff;">SHARE</y>
+                <div class="share-type">
+                    <h3>Копировать ссылку</h3>
+                    <div class="icons"><img style="width: 90px; height: 36px; border-radius: 40px;" src="https://imagenspng.com/wp-content/uploads/telefone-e-whatsapp-png-Imagem-png-para-baixar-gratis.png"></div>
+                </div>
+            </button>
             </div>
         </div>
     </div>

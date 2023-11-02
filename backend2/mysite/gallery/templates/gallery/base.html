@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{%static 'gallery/css/style-main.css'%}">
     <title>PhotoWave</title>
+    <script type="text/javascript" src="script.js"></script>
     <script>
-    function FuncImages() {
+    function FuncImagesShow() {
         document.getElementById("main").style.display = "block";
         document.getElementById("click").style.display = "block";
       }
@@ -17,7 +18,7 @@
     <div class="menu" onclick="window.location.href = 'user-info.html';">
         <p>тут ник пользователя</p>
         <a>Show photos</a>
-        <img class="avatar" src="https://static.cdprojektred.com/cms.cdprojektred.com/16x9_big/f4ce7b1be9bc4b0ee2df8f9a311a850a594d3d1a-1920x1080.jpg"><!-- картинку фигачишь вместо ссылки(в виде переменной, если нужно, всёравно сожрёт)-->
+        <img id="avatar" class="avatar" >
     </div>
     <section>
         <div class="form-box">
@@ -30,7 +31,7 @@
                         <label for="">Username</label>
                         
                     </div>
-                    <b id = "click" onclick = "FuncImages()"><ion-icon name="search-outline"></ion-icon></b> 
+                    <b id = "click" onclick = "FuncImagesShow()"><ion-icon name="search-outline" style="margin-top: 11px; margin-left: 11px;"></ion-icon></b> 
                     
                 </form>
                 
@@ -40,70 +41,63 @@
     </section>
 
     <div class="gallary" id="main">
-        <div class="stroke1">
-            <div class="image-banner">
+        <div class="stroke">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
                 <img class="image">
             </div>
-            <div class="image-banner">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
                 <img class="image">
             </div>
-            <div class="image-banner">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
                 <img class="image">
             </div>
-            <div class="image-banner">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
                 <img class="image">
             </div>
-            <div class="image-banner">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
                 <img class="image">
             </div>
-            <div class="image-banner">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
                 <img class="image">
             </div>
         </div>
-        <div class="stroke2">
-            <div class="image-banner">
+        <div class="stroke">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
                 <img class="image">
             </div>
-            <div class="image-banner">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
                 <img class="image">
             </div>
-            <div class="image-banner">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
                 <img class="image">
             </div>
-            <div class="image-banner">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
                 <img class="image">
             </div>
-            <div class="image-banner">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
                 <img class="image">
             </div>
-            <div class="image-banner">
+            <div id = "click" onclick = "FuncImages()" class="image-banner">
                 <img class="image">
             </div>
-    
-        </div>
-        <div class="stroke3">
-            <div class="image-banner">
-                <img class="image">
-            </div>
-            <div class="image-banner">
-                <img class="image">
-            </div>
-            <div class="image-banner">
-                <img class="image">
-            </div>
-            <div class="image-banner">
-                <img class="image">
-            </div>
-            <div class="image-banner">
-                <img class="image">
-            </div>
-            <div class="image-banner">
-                <img class="image">
-            </div>
-    
-        </div>
         </div>
 
+
+        <div class="photoload-main" id="photoload">
+            <div class="close-set-photo-main" onclick = "Funcdialog()" id="close-set-photo"><ion-icon name="close-outline"></ion-icon></div>
+            <div class="setphoto-main">
+                <h3>LOGIN</h3>
+                <hr>
+                <div class="img-set-main">
+                    <div class="image-banner">
+                        <div id="image" class="image"></div>
+                    </div>
+                </div>
+                <div class="interact-block-main">
+                    <button class="button-share" href="#"><ion-icon name="share-social-outline"></ion-icon></button>
+                </div>
+            </div>
+        </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
