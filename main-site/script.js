@@ -1,6 +1,6 @@
 
 window.onload = function() {
-    var ava = "url('https://static.cdprojektred.com/cms.cdprojektred.com/16x9_big/f4ce7b1be9bc4b0ee2df8f9a311a850a594d3d1a-1920x1080.jpg')";// картинку фигачишь вместо ссылки(в виде переменной, если нужно, всёравно сожрёт)
+    var ava = "url('')";// картинку фигачишь вместо ссылки(в виде переменной, если нужно, всёравно сожрёт)
     var element = document.getElementById('avatar');
     element.style.backgroundImage = ava;
 };
